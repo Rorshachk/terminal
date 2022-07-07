@@ -6,6 +6,7 @@ export const getProjects = async () => {
     `https://api.github.com/users/${config.social.github}/repos`,
   );
 
+  console.log(data);
   return data;
 };
 
