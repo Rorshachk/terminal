@@ -24,6 +24,34 @@ export const resume = async (args: string[]): Promise<string> => {
   return "My resume is loaded in a seperate page!";
 }
 
+// export const gui = async (args: string[]): Promise<string> => {
+//   window.open('https://m4tt72.com', '_self');
+
+//   return 'Opening GUI version...';
+// };
+
+// export const contact = async (args: string[]): Promise<string> => {
+//   return `<p>
+//   Email: shuangmuhu@gmail.com <br>
+//   Mobile: 571-315-4001 <br>
+//   </p>
+//   `;
+// };
+
+
+
+// export const vi = async (args: string[]): Promise<string> => {
+//   return `why use vi? try 'emacs'.`;
+// };
+
+// export const vim = async (args: string[]): Promise<string> => {
+//   return `why use vim? try 'emacs'.`;
+// };
+
+// export const emacs = async (args?: string[]): Promise<string> => {
+//   return `really? emacs? you should be using 'vim'`;
+// };
+
 export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: unable to run the command '${args[0]}' as root.`;
 };
@@ -54,7 +82,7 @@ export const banner = (args?: string[]): string => {
 Type 'help' to see list of available commands.
 
 --
-The project is open-source 🎉 type 'repo' to check out the repository.
+Cite: The project is open-source 🎉 type 'repo' to check out the repository.
 
 New 🎉: Try out the new 'theme' command. See all available themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>.
 New 🎉: New command 'neofetch', for you linux.
