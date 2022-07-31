@@ -77,6 +77,20 @@ export const repo = async (args?: string[]): Promise<string> => {
   return 'Opening repository...';
 };
 
+export const work = async (args?: string[]): Promise<string> => {
+  return  `
+  <p>
+    Currently I am interning at a self-driving unicorn for building self-driving cars.
+    I am part of the onboard infrastructure system team.
+    I am implementing a high-performance synchronization client that can both be used 
+    on car simulation platform and real car operating system.
+    To design a system that can be used in the onboard system, the performance is important.
+    I used lots of asynchronous socket programming to make sure the downloader has the best performance.
+    I used IO Uring which to make sure writing files to disk will not consumes too much memory.
+    Comparing with software engineer, I am more willing to identify myself as a computer system ethuenthusiast.
+  </p>
+  `
+}
 // export const donate = async (args?: string[]): Promise<string> => {
 //   window.open(packageJson.funding.url, '_blank');
 
