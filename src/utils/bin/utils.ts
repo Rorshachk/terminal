@@ -52,6 +52,19 @@ export const resume = async (args: string[]): Promise<string> => {
 //   return `really? emacs? you should be using 'vim'`;
 // };
 
+
+export const contact = async (args?: string[]): Promise<string> => {
+  return `
+  <p>
+    Email: shuangmuhu@gmail.com <br>
+    Phone (very unreliable way to reach me! ): 571-315-4001 <br>
+    WX: hsmKnowNothing <br>
+    QQ: 2020329074 <br>
+    Discord: Know Nothing#5731 <br>
+  </p>
+  `;
+};
+
 export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: unable to run the command '${args[0]}' as root.`;
 };
@@ -85,7 +98,6 @@ Type 'help' to see list of available commands.
 Cite: The project is open-source 🎉 type 'repo' to check out the repository.
 
 New 🎉: Try out the new 'theme' command. See all available themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>.
-New 🎉: New command 'neofetch', for you linux.
 --
 `;
 };
