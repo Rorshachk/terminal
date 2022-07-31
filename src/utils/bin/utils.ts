@@ -19,35 +19,53 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const gui = async (args: string[]): Promise<string> => {
-  window.open('https://m4tt72.com', '_self');
+export const resume = async (args: string[]): Promise<string> => {
+  window.open("https://www.dropbox.com/s/4v8jsnbl9mwyvk9/resume_system.pdf?dl=0");
+  return "My resume is loaded in a seperate page!";
+}
 
-  return 'Opening GUI version...';
-};
+// export const gui = async (args: string[]): Promise<string> => {
+//   window.open('https://m4tt72.com', '_self');
 
-export const email = async (args: string[]): Promise<string> => {
-  window.open('mailto:hi@nm4tt72.com');
+//   return 'Opening GUI version...';
+// };
 
-  return 'Opening mailto:hi@m4tt72.com...';
-};
+// export const contact = async (args: string[]): Promise<string> => {
+//   return `<p>
+//   Email: shuangmuhu@gmail.com <br>
+//   Mobile: 571-315-4001 <br>
+//   </p>
+//   `;
+// };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `why use vi? try 'emacs'.`;
-};
 
-export const vim = async (args: string[]): Promise<string> => {
-  return `why use vim? try 'emacs'.`;
-};
 
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `really? emacs? you should be using 'vim'`;
+// export const vi = async (args: string[]): Promise<string> => {
+//   return `why use vi? try 'emacs'.`;
+// };
+
+// export const vim = async (args: string[]): Promise<string> => {
+//   return `why use vim? try 'emacs'.`;
+// };
+
+// export const emacs = async (args?: string[]): Promise<string> => {
+//   return `really? emacs? you should be using 'vim'`;
+// };
+
+
+export const contact = async (args?: string[]): Promise<string> => {
+  return `
+  <p>
+    Email: shuangmuhu@gmail.com <br>
+    Phone (very unreliable way to reach me! ): 571-315-4001 <br>
+    WX: hsmKnowNothing <br>
+    QQ: 2020329074 <br>
+    Discord: Know Nothing#5731 <br>
+  </p>
+  `;
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  setTimeout(function () {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-  }, 1000);
-
   return `Permission denied: unable to run the command '${args[0]}' as root.`;
 };
 
@@ -59,28 +77,41 @@ export const repo = async (args?: string[]): Promise<string> => {
   return 'Opening repository...';
 };
 
-export const donate = async (args?: string[]): Promise<string> => {
-  window.open(packageJson.funding.url, '_blank');
+export const work = async (args?: string[]): Promise<string> => {
+  return  `
+  <p>
+    Currently I am interning at a self-driving unicorn for building self-driving cars.
+    I am part of the onboard infrastructure system team.
+    I am implementing a high-performance synchronization client that can both be used 
+    on car simulation platform and real car operating system.
+    To design a system that can be used in the onboard system, the performance is important.
+    I used lots of asynchronous socket programming to make sure the downloader has the best performance.
+    I used IO Uring which to make sure writing files to disk will not consumes too much memory.
+    Comparing with software engineer, I am more willing to identify myself as a computer system ethuenthusiast.
+  </p>
+  `
+}
+// export const donate = async (args?: string[]): Promise<string> => {
+//   window.open(packageJson.funding.url, '_blank');
 
-  return 'Opening donation url...';
-};
+//   return 'Opening donation url...';
+// };
 
 export const banner = (args?: string[]): string => {
   return `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
+██████╗  ██████╗ ██████╗ ███████╗██╗  ██╗ █████╗  ██████╗██╗  ██╗
+██╔══██╗██╔═══██╗██╔══██╗██╔════╝██║  ██║██╔══██╗██╔════╝██║  ██║
+██████╔╝██║   ██║██████╔╝███████╗███████║███████║██║     ███████║
+██╔══██╗██║   ██║██╔══██╗╚════██║██╔══██║██╔══██║██║     ██╔══██║
+██║  ██║╚██████╔╝██║  ██║███████║██║  ██║██║  ██║╚██████╗██║  ██║
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 
 Type 'help' to see list of available commands.
 
 --
-The project is open-source 🎉 type 'repo' to check out the repository.
+Cite: The project is open-source 🎉 type 'repo' to check out the repository.
 
 New 🎉: Try out the new 'theme' command. See all available themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>.
-New 🎉: New command 'neofetch', for you linux.
 --
 `;
 };
